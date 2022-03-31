@@ -1,3 +1,5 @@
+; display hello world
+
 .model small
 .stack 100h
 .data
