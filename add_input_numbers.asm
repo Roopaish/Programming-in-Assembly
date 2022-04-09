@@ -1,3 +1,5 @@
+; add numbers by asking input from user
+
 .model small
 .stack
 .data

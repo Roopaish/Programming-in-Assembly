@@ -1,4 +1,5 @@
 ; add and sub 8-bit numbers
+; !not working 
 
 .model small
 .stack 100h

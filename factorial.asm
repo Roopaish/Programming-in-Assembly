@@ -1,3 +1,6 @@
+; find factorial of a number
+; !not complete
+
 .model small
 .stack 100h
 .data
