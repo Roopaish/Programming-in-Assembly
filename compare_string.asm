@@ -2,7 +2,7 @@
 .stack 100h
 .data
     str1 db "Hello$"
-    str2 db "Hello$"    
+    str2 db "Helloo$"    
     msg1 db "Strings are same$"
     msg2 db "Strings are different$"  
     
@@ -35,7 +35,7 @@
               
         ; comparing each character
         enter:
-        mov cl,al
+        mov cx, offset strlen
         mov di, offset str1
         mov si, offset str2
         check:
@@ -56,7 +56,7 @@
         mov ah, 09h
         int 21h
         
-        skipNotSame
+        skipNotSame:
         .exit
     main endp
 end main
