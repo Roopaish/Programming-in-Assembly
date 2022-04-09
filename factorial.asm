@@ -1,5 +1,5 @@
 ; find factorial of a number
-; !not complete
+; TODO: not complete
 
 .model small
 .stack 100h
