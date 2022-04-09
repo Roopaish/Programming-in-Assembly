@@ -1,5 +1,6 @@
 LXI H, CB06H      ; input size of the array
 MOV C, M          ; C = size of array
+
 INX H             ; Inputting data
 DCR C             ; Decreasing C indicating a data is entered
 

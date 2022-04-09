@@ -38,8 +38,6 @@
             
             mov ah, 4ch ; return control to OS i.e stop program
             int 21h
-        
-        
         .exit
     main endp
 end main

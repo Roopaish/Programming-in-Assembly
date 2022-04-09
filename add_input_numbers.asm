@@ -12,7 +12,7 @@
         
         mov ah, 01
         int 21h
-        sub al, 30h   ; a = 2nd number, ascii -> hex
+        sub al, 30h   ; al = 2nd number, ascii -> hex
         
         add al, bl
         jnc skip
