@@ -23,3 +23,10 @@ JNZ multiplyLoop
 
 MOV D, A         ; D = A
 RET
+
+; Working for B = 4
+; D = 1 + 1 + 1 + 1 = 4   (4 x 1)
+; D = 4 + 4 + 4 = 12      (4 x 3)
+; D = 12 + 12 = 24        ((4 x 3) x 2)
+; D = 24 = 24             ((4 x 3 x 2) x 1)
+; Result is 24            4 x 3 x 2 x 1
