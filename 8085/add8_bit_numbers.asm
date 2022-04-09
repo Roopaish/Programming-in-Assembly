@@ -8,8 +8,8 @@ HLT
 ; Adding From Memory Without Carry
 LXI H, 1000H ; [1000] = input from memory
 MOV A, M     ; A = [1000]
-INX H        ; H = H + 1, [1001] = input from memory
-ADD M        ; A = A + [H]
+INX H        ; HL++, [1001] = input from memory
+ADD M        ; A = A + [HL]
 STA 1002H    ; [1002] = A
 HLT
 
@@ -20,8 +20,9 @@ INX H        ; H = H + 1, [1001] = input from memory
 MVI B, 00H   ; B = 00
 ADD M        ; A = A + [H]
 ;DAA          ; Converts A to BCD
-JNC label    ; if A < 255, skip next instruction
-INX B       ; B = B + 1
+JNC label    ; jump if no carry
+INX B        ; B = B + 1
+
 label:
 STA 1003H    ; [1003] = A
 MOV A, B 
