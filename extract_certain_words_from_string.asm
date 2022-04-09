@@ -22,12 +22,12 @@
         
         ; Programming
         mov cx, 11h
-        mov si, offset str
+        mov di, offset str
         
-        add [si], 36h
+        add di, 36h
         
         label2:
-        mov dl, [si]
+        mov dl, [di]
         mov ah, 02h
         int 21h
         inc si
