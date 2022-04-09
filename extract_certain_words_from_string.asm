@@ -1,16 +1,15 @@
 ; Given: Microprocessor and Assembly Language Programming
 ; Display: Microprocessor Programming
-; !not working
 
 .model small
 .stack
 .data
-    str dB "Microprocessor and Assembly Language Programming$";
+    str dB "Microprocessor and Assembly Language Programming";
 .code
     main proc
         .startup
         ; Microprocessor
-        mov cx, 14h
+        mov cx, 0Eh         ; 14 dec = 0E hex
         mov si, offset str
         
         label1:             ; Looping through each character
@@ -22,13 +21,12 @@
         
         
         ; Programming
-        mov cx, 11h
-        mov di, offset str
+        mov cx, 0Ch         ; 12 dec = C hex
         
-        add di, 36h
+        add si, 16h         ; 36 - 14 = 22 in dec = 16 in hex
         
         label2:
-        mov dl, [di]
+        mov dl, [si]
         mov ah, 02h
         int 21h
         inc si
